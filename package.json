@@ -1,0 +1,1 @@
+{"name":"progression-bot","version":"1.0.0","description":"Bot to collect progression data weekly","main":"bot.js","author":"Aniela Lapinski","dependencies":{"@discordjs/rest":"^1.0.0","discord.io":"https://github.com/woor/discord.io/tarball/gateway_v6","discord.js":"^14.0.3","winston":"^3.8.1"},"devDependencies":{"eslint":"^8.20.0"}}
