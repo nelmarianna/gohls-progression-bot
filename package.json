@@ -2,12 +2,15 @@
     "name": "progression-bot",
     "version": "1.0.0",
     "description": "Bot to collect progression data weekly",
-    "main": "bot.js",
+    "main": "index.js",
     "author": "Aniela Lapinski",
     "dependencies": {
         "@discordjs/rest": "^1.0.0",
+        "@google-cloud/local-auth": "^2.1.0",
         "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
-        "discord.js": "^14.0.3",
+        "discord.js": "^14.7.1",
+        "dotenv": "^16.0.3",
+        "googleapis": "^105.0.0",
         "winston": "^3.8.1"
     },
     "devDependencies": {
@@ -18,19 +21,26 @@
         "jest": "^28.1.3"
     },
     "scripts": {
-        "test": "jest"
+        "test": "jest",
+        "start": "cd google-api && node ."
     },
     "jest": {
         "verbose": true,
-        "coverageReporters": ["text"],
-        "coveragePathIgnorePatterns": ["<rootDir>/test", "<rootDir>/data","<rootDir>/node_modules"],
+        "coverageReporters": [
+            "text"
+        ],
+        "coveragePathIgnorePatterns": [
+            "<rootDir>/test",
+            "<rootDir>/data",
+            "<rootDir>/node_modules"
+        ],
         "coverageThreshold": {
-          "global": {
-            "branches": 50,
-            "functions": 50,
-            "lines": 50,
-            "statements": 50
-          }
+            "global": {
+                "branches": 50,
+                "functions": 50,
+                "lines": 50,
+                "statements": 50
+            }
         }
     }
 }
