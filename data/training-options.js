@@ -1,5 +1,11 @@
 /* eslint-disable comma-dangle */
 
+const custom = {
+	customPick1: 'Custom Pick 1',
+	customPick2: 'Custom Pick 2',
+	customPick3: 'Custom Pick 3',
+};
+
 const skaters = {
 	speedSkating:'Speed Skating',
 	distanceSkating: 'Distance Skating',
@@ -9,9 +15,6 @@ const skaters = {
 	hitTheTarget: 'Hit The Targets',
 	studyFilm:'Study Film',
 	specialTeams: 'Special Teams',
-	çustomPick1: 'Custom Pick 1',
-	customPick2: 'Çustom Pick 2',
-	customPick3: 'Çustom Pick 3',
 	save: 'Save',
 	learnCBig: 'Learn C (Big)',
 	learnCSmall:'Learn C (Small)',
@@ -20,6 +23,7 @@ const skaters = {
 	learnDBig:'Learn D (Big)',
 	learnDSmall:'Learn D (Small)',
 	missed: 'Missed',
+	...custom
 };
 
 const goalies = {
@@ -30,12 +34,10 @@ const goalies = {
 	lapsInPads: 'Laps In Pads',
 	positioning: 'Positioning',
 	underPressure: 'Under Pressure',
-	çustomPick1: 'Custom Pick 1',
-	customPick2: 'Çustom Pick 2',
-	customPick3: 'Çustom Pick 3',
 	save: 'Save',
 	consistency: '+1 Consistency',
 	missed: 'Missed',
+	...custom
 };
 
 const skatersPick = {
@@ -82,5 +84,15 @@ const goaliesPick = {
 	aggression: 'Aggression'
 };
 
+const progressionDictionary = {
+	...skaters,
+	...goalies
+};
 
-module.exports = { skaters, skatersPick, goalies, goaliesPick };
+const picksDictionary = {
+	...goaliesPick,
+	...skatersPick
+};
+
+
+module.exports = { skaters, skatersPick, goalies, goaliesPick, custom, picksDictionary, progressionDictionary };

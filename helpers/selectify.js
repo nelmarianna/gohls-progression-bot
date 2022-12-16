@@ -1,15 +1,16 @@
-function selectify(options) {
+function selectify(options, select) {
 
-	const selectMenuOptions = [];
+	const choiceOptions = [];
+	let key = 'name';
+	if (select) {key = 'label';}
 
 	for (const opt in options) {
-		selectMenuOptions.push({
-			label: options[opt],
+		choiceOptions.push({
+			[key]: options[opt],
 			value: opt,
 		});
 	}
-
-	return selectMenuOptions;
+	return choiceOptions;
 }
 
 module.exports = {
